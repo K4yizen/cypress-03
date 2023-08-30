@@ -4,7 +4,7 @@ describe("File upload and download tests", () => {
     });
   
     it("Upload file and download it in Zip format", () => {
-      cy.get("#fileField").attachFile("fileToUpload.jpg");
+      cy.get("#fileField").attachFile("La tisane.jpg");
       cy.contains("It contains 1 uploaded file").should("be.visible");
       cy.contains("Download files").click();
       cy.contains("Zip")
@@ -22,7 +22,7 @@ describe("File upload and download tests", () => {
     });
   
     it("Upload file and download it in Tar format", () => {
-      cy.get("#fileField").attachFile("fileToUpload.jpg");
+      cy.get("#fileField").attachFile("La tisane.jpg");
       cy.contains("It contains 1 uploaded file").should("be.visible");
       cy.contains("Download files").click();
       cy.contains("Tar")
